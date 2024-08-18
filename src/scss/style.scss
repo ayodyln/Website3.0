@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '_variables.scss';
+
+html {
+	color-scheme: light dark;
+}
+
+body {
+	background-color: $white;
+	color: $dark;
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: $dark;
+		color: $white;
+	}
+}
