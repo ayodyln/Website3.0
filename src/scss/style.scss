@@ -1,21 +1,36 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+@import '_resets.scss';
 @import '_variables.scss';
 
-html {
-	color-scheme: light dark;
-}
-
-body {
-	background-color: $white;
-	color: $dark;
+:root {
+	--background: #{$white};
+	--text: #{$dark};
 }
 
 @media (prefers-color-scheme: dark) {
-	body {
-		background-color: $dark;
-		color: $white;
+	:root {
+		--background: #{$dark};
+		--text: #{$white};
 	}
+}
+
+:root:has(#theme [value='☀️']:checked) {
+	color-scheme: light;
+	--background: #{$white};
+	--text: #{$dark};
+}
+
+:root:has(#theme [value='🌑']:checked) {
+	color-scheme: dark;
+	--background: #{$dark};
+	--text: #{$white};
+}
+
+html {
+	color-scheme: light dark;
+	font-family: sans-serif;
+}
+
+body {
+	background-color: var(--background);
+	color: var(--text);
 }
