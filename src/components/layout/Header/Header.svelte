@@ -1,3 +1,13 @@
+<script lang="ts">
+	import { onMount } from 'svelte';
+	import { browser } from '$app/environment';
+	import { theme } from '$stores/theme';
+
+	let themeReady: boolean;
+
+	if (browser) onMount(() => (themeReady = true));
+</script>
+
 <header id="SiteHeader" class="header">
 	<nav class="header__navigation">
 		<div class="header__navigation-home">
@@ -23,16 +33,47 @@
 			<li>
 				<a href="About">About</a>
 			</li>
-			<li>
-				<label
-					>Theme:
-					<select data-theme-picker name="themepicker" id="theme">
-						<option value="💻">System</option>
-						<option value="☀️">Light</option>
-						<option value="🌑">Dark</option>
+			<li class="header__navigation-list__theme-control">
+				{#if themeReady}
+					<label for="themepicker" class="sr-only">Theme:</label>
+					<select data-theme-picker name="themepicker" id="themepicker" bind:value={$theme}>
+						<option value="system">System</option>
+						<option value="light">Light</option>
+						<option value="dark">Dark</option>
 					</select>
-				</label>
+				{/if}
 			</li>
 		</ul>
 	</nav>
 </header>
+
+<style lang="scss">
+	@import '$styles/_variables.scss';
+
+	.header {
+		background-color: red;
+		padding: 1rem 2rem;
+		&__navigation {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		&__navigation-home {
+		}
+
+		&__navigation-list {
+			display: flex;
+			gap: 1rem;
+			list-style: none;
+
+			li a {
+				text-decoration: none;
+			}
+
+			&__theme-control {
+				min-width: 76px;
+			}
+		}
+	}
+</style>
