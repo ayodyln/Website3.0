@@ -15,6 +15,7 @@ const config = {
 		alias: {
 			$styles: './src/scss',
 			'$components/layout': './src/components/layout.ts',
+			$ui: './src/stories/index.ts',
 			$stores: './src/stores'
 		}
 	}

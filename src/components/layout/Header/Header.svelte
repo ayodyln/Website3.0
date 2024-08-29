@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
 	import { theme } from '$stores/theme';
+	import { ThemePicker } from '$ui';
 
 	let themeReady: boolean;
 
@@ -35,12 +36,7 @@
 			</li>
 			<li class="header__navigation-list__theme-control">
 				{#if themeReady}
-					<label for="themepicker" class="sr-only">Theme:</label>
-					<select data-theme-picker name="themepicker" id="themepicker" bind:value={$theme}>
-						<option value="system">System</option>
-						<option value="light">Light</option>
-						<option value="dark">Dark</option>
-					</select>
+					<ThemePicker bind:value={$theme} />
 				{/if}
 			</li>
 		</ul>
@@ -52,7 +48,9 @@
 
 	.header {
 		background-color: $primary;
+		border-radius: 0 0 1rem 1rem;
 		padding: 1rem;
+
 		&__navigation {
 			display: flex;
 			justify-content: space-between;
