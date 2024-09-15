@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/svelte';
 import ThemePicker from './ThemePicker.svelte';
 
 const meta = {
-	title: 'Example/ThemePicker',
+	title: 'UI/ThemePicker',
 	component: ThemePicker,
 	tags: ['autodocs'],
 	argTypes: {

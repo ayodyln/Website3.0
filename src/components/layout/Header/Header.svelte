@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
 	import { theme } from '$stores/theme';
-	import { ThemePicker } from '$ui';
+	import { Anchor, ThemePicker } from '$ui';
 
 	let themeReady: boolean;
 
@@ -26,13 +26,13 @@
 
 		<ul class="header__navigation-list">
 			<li>
-				<a href="/Work">Work</a>
+				<Anchor href="/work" label="Work" />
 			</li>
 			<li>
-				<a href="/Blog">Blog</a>
+				<Anchor href="/blog" label="Blog" />
 			</li>
 			<li>
-				<a href="About">About</a>
+				<Anchor href="/about" label="About" />
 			</li>
 			<li class="header__navigation-list__theme-control">
 				{#if themeReady}
@@ -44,36 +44,36 @@
 </header>
 
 <style lang="scss">
-  @import '$styles/_variables.scss';
+    @import '$styles/_variables.scss';
 
-  .header {
-    background-color: $primary;
-    border-radius: 0 0 1rem 1rem;
-    padding: 1rem;
+    .header {
+        background-color: $primary;
+        border-radius: 0 0 1rem 1rem;
+        padding: 1rem;
 
-    &__navigation {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+        &__navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__navigation-home {
+        }
+
+        &__navigation-list {
+            display: flex;
+            gap: 1rem;
+            list-style: none;
+
+            li a {
+                text-decoration: none;
+                color: var(--text);
+                font-weight: 700;
+            }
+
+            &__theme-control {
+                min-width: 76px;
+            }
+        }
     }
-
-    &__navigation-home {
-    }
-
-    &__navigation-list {
-      display: flex;
-      gap: 1rem;
-      list-style: none;
-
-      li a {
-        text-decoration: none;
-        color: var(--text);
-        font-weight: 700;
-      }
-
-      &__theme-control {
-        min-width: 76px;
-      }
-    }
-  }
 </style>
