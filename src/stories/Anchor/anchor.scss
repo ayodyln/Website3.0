@@ -4,4 +4,8 @@
     text-decoration: none;
     color: var(--text);
     font-weight: 700;
+
+    &:hover {
+        opacity: 0.8;
+    }
 }
