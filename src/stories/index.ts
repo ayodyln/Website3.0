@@ -1,4 +1,4 @@
-import Button from './Button.svelte';
-import ThemePicker from './ThemePicker.svelte';
+import Button from './Button/Button.svelte';
+import ThemePicker from './ThemePicker/ThemePicker.svelte';
 
 export { Button, ThemePicker };

@@ -44,36 +44,36 @@
 </header>
 
 <style lang="scss">
-	@import '$styles/_variables.scss';
+  @import '$styles/_variables.scss';
 
-	.header {
-		background-color: $primary;
-		border-radius: 0 0 1rem 1rem;
-		padding: 1rem;
+  .header {
+    background-color: $primary;
+    border-radius: 0 0 1rem 1rem;
+    padding: 1rem;
 
-		&__navigation {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-		}
+    &__navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-		&__navigation-home {
-		}
+    &__navigation-home {
+    }
 
-		&__navigation-list {
-			display: flex;
-			gap: 1rem;
-			list-style: none;
+    &__navigation-list {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
 
-			li a {
-				text-decoration: none;
-				color: var(--text);
-				font-weight: 700;
-			}
+      li a {
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 700;
+      }
 
-			&__theme-control {
-				min-width: 76px;
-			}
-		}
-	}
+      &__theme-control {
+        min-width: 76px;
+      }
+    }
+  }
 </style>

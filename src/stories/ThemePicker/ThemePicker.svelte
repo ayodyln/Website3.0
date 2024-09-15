@@ -1,7 +1,7 @@
 <script lang="ts">
 	// Styles
 	import './ThemePicker.scss';
-	import '../scss/_global.scss';
+	import '$styles/_global.scss';
 
 	/**
 	 * Theme Value
