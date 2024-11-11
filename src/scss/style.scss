@@ -1,0 +1,44 @@
+@use 'reset';
+@use 'variables';
+@use 'globals';
+
+:root {
+    --background: #{variables.$light};
+    --text: #{variables.$dark};
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #{variables.$dark};
+        --text: #{variables.$light};
+    }
+}
+
+/* Dark theme */
+html[data-theme='dark'] {
+    color-scheme: dark;
+    --background: #{variables.$dark};
+    --text: #{variables.$light};
+}
+
+/* Dark theme */
+html[data-theme='light'] {
+    color-scheme: light;
+    --background: #{variables.$light};
+    --text: #{variables.$dark};
+}
+
+html {
+    color-scheme: light dark;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+}
+
+main {
+    max-width: 2000px;
+    margin: auto;
+}
