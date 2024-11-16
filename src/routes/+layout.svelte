@@ -1,5 +1,13 @@
 <script lang="ts">
-	import '../scss/style.scss';
+	import '$styles/style.scss';
+	import { Header } from '$design-system';
 </script>
 
-<slot />
+<!-- Navigation -->
+<Header />
+
+<main>
+	<slot />
+</main>
+
+<!-- Footer -->

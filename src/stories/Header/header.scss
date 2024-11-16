@@ -1,0 +1,62 @@
+@use "../../scss/variables.scss";
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1600px;
+    margin: auto;
+
+    &__wrapper {
+        background: variables.$accent-1;
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__logo {
+        background: white;
+        padding: 16px;
+
+        svg {
+            fill: variables.$dark;
+        }
+    }
+
+    &__navigation {
+        padding: 16px;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        a {
+            font-size: 1.25rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: var(--text);
+        }
+    }
+
+    &__right {
+        list-style: none;
+        padding: 0;
+        padding-inline: 1rem;
+
+        a {
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        a svg {
+            width: 2rem;
+            fill: var(--text);
+        }
+    }
+}
