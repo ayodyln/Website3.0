@@ -1,4 +1,4 @@
-@use "../../scss/variables.scss";
+@use "$styles/variables.scss";
 
 .site-header {
     display: flex;
@@ -9,6 +9,9 @@
 
     &__wrapper {
         background: variables.$accent-1;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
     }
 
     &__left {
