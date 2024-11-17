@@ -1,26 +1,20 @@
-<script>
-  import './button.scss';
+<script lang="ts">
+	import './button.scss';
 
-  /**
-   * @typedef {Object} Props
-   * @property {boolean} [primary] Is this the principal call to action on the page?
-   * @property {string} [backgroundColor] What background color to use
-   * @property {'small' | 'medium' | 'large'} [size] How large should the button be?
-   * @property {string} label Button contents
-   * @property {() => void} [onClick] The onclick event handler
-   */
+	type Props = {
+		style: 'primary' | 'secondary' | 'tertiary';
+		size: 'small' | 'medium' | 'large';
+		label: string;
+		onClick: () => void;
+	};
 
-  /** @type {Props} */
-  const { primary = false, backgroundColor, size = 'medium', label, onClick } = $props();
+	const { style = 'primary', size = 'medium', label, onClick }: Props = $props();
 </script>
 
 <button
-  type="button"
-  class={['storybook-button', `storybook-button--${size}`].join(' ')}
-  class:storybook-button--primary={primary}
-  class:storybook-button--secondary={!primary}
-  style:background-color={backgroundColor}
-  onclick={onClick}
+	type="button"
+	class={['button', `button__${size}`, `button__${style}`].join(' ')}
+	onclick={onClick}
 >
-  {label}
+	{label}
 </button>
