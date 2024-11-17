@@ -1,5 +1,5 @@
 <script>
-  import './button.css';
+  import './button.scss';
 
   /**
    * @typedef {Object} Props
