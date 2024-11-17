@@ -12,7 +12,7 @@
 
     .hero {
         &__wrapper {
-            min-height: 40vh;
+            min-height: 80vh;
             padding: 16px;
             background: variables.$slate;
             box-shadow: 0 0 0 100vmax variables.$slate;

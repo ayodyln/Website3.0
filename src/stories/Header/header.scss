@@ -20,7 +20,7 @@
     }
 
     &__logo {
-        background: white;
+        background: variables.$primary;
         padding: 16px;
 
         svg {
@@ -44,6 +44,7 @@
             font-weight: bold;
             text-decoration: none;
             color: var(--text);
+            transition: color 0.3s ease-in-out;
 
             &::after {
                 content: '';
@@ -52,12 +53,16 @@
                 bottom: -2px;
                 width: 0;
                 height: 2px;
-                background: var(--text);
+                background: variables.$primary;
                 transition: width 0.3s ease-in-out;
             }
 
             &:hover::after {
                 width: 100%;
+            }
+
+            &:hover {
+                color: variables.$primary;
             }
         }
     }
@@ -70,11 +75,16 @@
         a {
             text-decoration: none;
             color: var(--text);
+            transition: fill 0.3s ease-in-out;
+            fill: var(--text);
+        }
+
+        a:hover {
+            fill: variables.$primary;
         }
 
         a svg {
             width: 2rem;
-            fill: var(--text);
         }
     }
 }
