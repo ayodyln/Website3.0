@@ -71,6 +71,9 @@
         list-style: none;
         padding: 0;
         padding-inline: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
 
         a {
             text-decoration: none;
@@ -85,6 +88,19 @@
 
         a svg {
             width: 2rem;
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        button svg {
+            width: 1.25rem;
+            fill: variables.$primary
         }
     }
 }
