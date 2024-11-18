@@ -1,3 +1,7 @@
+<script lang="ts">
+	import { Button } from '$design-system';
+</script>
+
 <section>
 	<div class="hero">
 		<div class="hero__inner">
@@ -10,8 +14,8 @@
 					in making experiences that improve people's lives.
 				</p>
 				<div>
-					<button>View My Portfolio</button>
-					<button>Contact Me</button>
+					<Button label="View My Portfolio" icon="arrow" onClick={() => console.log('oi')} />
+					<Button label="Contact Me" style="tertiary" onClick={() => console.log('oi')} />
 				</div>
 			</div>
 			<figure class="hero__figure">
@@ -63,6 +67,13 @@
 
             p {
                 font-size: 20px;
+            }
+
+            div:last-child {
+                margin-top: 12px;
+                display: flex;
+                gap: 12px;
+                align-items: center;
             }
         }
 

@@ -93,31 +93,5 @@
         a svg {
             width: 2rem;
         }
-
-        button {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 16px;
-            cursor: pointer;
-            border-radius: 900px;
-            border: none;
-            background-color: variables.$primary;
-            color: variables.$dark;
-            transition: background ease 0.3s;
-
-            &:hover {
-                background-color: variables.$primary-hover;
-            }
-
-            &:active {
-                transform: scale(0.99);
-            }
-        }
-
-        button svg {
-            width: 1.25rem;
-            fill: variables.$dark;
-        }
     }
 }

@@ -2,7 +2,9 @@
 @use '$styles/reset.scss';
 
 .button {
-    display: inline-block;
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
     cursor: pointer;
     border: 0;
     border-radius: 2rem;
@@ -11,10 +13,14 @@
     font-family: sans-serif;
     transition: background-color 0.3s ease-in-out;
     background: none;
+    color: variables.$dark;
+
+    svg {
+        fill: variables.$dark;
+    }
 
     &__primary {
         background-color: variables.$primary;
-        color: var(--text);
 
         &:hover {
             background-color: variables.$primary-hover;
@@ -23,7 +29,6 @@
 
     &__secondary {
         border: 2px solid variables.$primary;
-        color: var(--text);
 
         &:hover {
             background-color: rgba(44, 218, 157, 0.2);
@@ -52,5 +57,9 @@
     &__large {
         padding: 12px 24px;
         font-size: 16px;
+    }
+
+    &:active {
+        transform: scale(0.99);
     }
 }
