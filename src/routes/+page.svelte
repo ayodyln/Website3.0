@@ -5,12 +5,18 @@
 <Hero />
 
 <div class="services">
-	test
+	<hgroup>
+		<p>My Mission</p>
+		<h2>Creating memorable and innovative experiences with my expertise</h2>
+	</hgroup>
 </div>
 
 <style lang="scss">
-
-
     .services {
+		min-height: 400px;
+
+		hgroup {
+			background: red;
+		}
     }
 </style>
