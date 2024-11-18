@@ -2,19 +2,19 @@
 	import './button.scss';
 
 	type Props = {
-		style?: 'primary' | 'secondary' | 'tertiary';
+		buttonStyle?: 'primary' | 'secondary' | 'tertiary';
 		size?: 'small' | 'medium' | 'large';
 		label: string;
 		icon?: string;
 		onClick: () => void;
 	};
 
-	const { style = 'primary', size = 'medium', label, icon, onClick }: Props = $props();
+	const { buttonStyle = 'primary', size = 'medium', label, icon, onClick }: Props = $props();
 </script>
 
 <button
 	type="button"
-	class={['button', `button__${size}`, `button__${style}`].join(' ')}
+	class={['button', `button__${size}`, `button__${buttonStyle}`].join(' ')}
 	onclick={onClick}
 >
 	<span>{label}</span>

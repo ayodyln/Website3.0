@@ -16,6 +16,7 @@ const config = {
 
 		alias: {
 			$styles: 'src/scss',
+			$components: 'src/components',
 			'$design-system': 'src/stories/stories.ts'
 		}
 	},
