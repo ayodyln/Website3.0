@@ -3,14 +3,12 @@
 	import { Header, Footer } from '$design-system';
 </script>
 
-<!-- Navigation -->
 <Header />
 
 <main>
 	<slot />
 </main>
 
-<!-- Footer -->
 <Footer />
 
 <style lang="scss">

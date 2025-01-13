@@ -7,10 +7,9 @@
 		<div class="hero__text">
 			<h1><span>Hi, I'm Dylan!</span><br><span>Front-End Engineer & UI/UX Designer</span></h1>
 			<p>
-				I'm passionate about engineering the highest quality websites and applications, with the user's
-				experience put first. Having experience in creating clean, scalable, and performant code I
-				specialize
-				in making experiences that improve people's lives.
+				With a deep passion for crafting top-tier applications and exceptional user experiences, I bring a
+				wealth of expertise in developing scalable and high-performance code. By prioritizing the user in every
+				project, I am dedicated to making a meaningful impact on people's lives.
 			</p>
 			<div>
 				<Button label="View My Portfolio" icon="arrow" onClick={() => console.log('oi')} />
@@ -75,7 +74,7 @@
             max-width: 400px;
 
             img {
-                clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+                border-radius: 32px;
             }
 
         }
