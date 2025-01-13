@@ -1,0 +1,12 @@
+@use "$styles/variables.scss";
+
+.site-footer {
+    background: variables.$accent-1;
+
+    &__content {
+        max-width: 1600px;
+        margin: auto;
+        padding: 24px;
+        text-align: center;
+    }
+}
