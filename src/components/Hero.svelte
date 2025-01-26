@@ -30,7 +30,7 @@
 		background: variables.$slate;
 		box-shadow: 0 0 0 100vmax variables.$slate;
 		clip-path: inset(0 -100vmax);
-		min-height: calc(100vh - 78px);
+		min-height: calc(100vh - 71px);
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
