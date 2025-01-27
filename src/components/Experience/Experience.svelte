@@ -12,10 +12,20 @@
 			`,
 			projects: [],
 			tech: ['Javascript', 'VueJs', 'CSS', 'Storybook']
+		},
+		{
+			title: 'Web Developer',
+			href: '',
+			company: 'Pictureline',
+			duration: { start: '', end: '' },
+			description: '',
+			projects: [],
+			tech: []
 		}
 	]);
 	
-	function localizeDateTime(date: string | Date): string {
+	function localizeDateTime(date: string | Date): string | void {
+		if (!date) return;
 		return Intl.DateTimeFormat(navigator.language, {
 			year: 'numeric'
 		}).format(new Date(date));
@@ -83,13 +93,23 @@
 		ul {
 			list-style: none;
 			padding: 0;
+			display: flex;
+			width: 100%;
+			gap: 16px;
+			
+			li {
+				max-width: 500px;
+				width: 100%;
+			}
 		}
 		
 		&__card {
-			max-width: 500px;
+			width: 100%;
+			min-height: 225px;
 			background: variables.$slate;
 			border-radius: 8px;
 			padding: 12px;
+			border: solid 1px variables.$primary;
 			box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
 			0 2px 2px hsl(0deg 0% 0% / 0.075),
 			0 4px 4px hsl(0deg 0% 0% / 0.075),
